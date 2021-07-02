@@ -1,0 +1,516 @@
+/* ROOT node */
+
+oot {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/* show on cards */
+@-webkit-keyframes shadow-drop-center{0%{-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent}100%{-webkit-box-shadow:0 0 20px 0 rgba(0,0,0,.35);box-shadow:0 0 20px 0 rgba(0,0,0,.35)}}@keyframes shadow-drop-center{0%{-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent}100%{-webkit-box-shadow:0 0 20px 0 rgba(0,0,0,.35);box-shadow:0 0 20px 0 rgba(0,0,0,.35)}}
+
+/* attention elements */  
+ @-webkit-keyframes blink-1{0%,50%,100%{opacity:1}25%,75%{opacity:0}}@keyframes blink-1{0%,50%,100%{opacity:1}25%,75%{opacity:0}}
+
+@font-face {
+  font-family: 'lobster';
+  src: url('../fonts/Lobster-Regular.ttf');
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+body{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.topbar{
+  z-index: 10;
+  background-color: #0776bd;
+  border-color: rgb(5, 104, 170);
+  padding-top: 3px;
+  height: 30px;
+}
+
+.text-color{
+  color: #fff;
+}
+
+.navbar-toped{
+  z-index:13;
+}
+.header-text{
+  font-family: lobster;
+}
+
+.header-color a{
+  color: #0776bd;
+}
+
+.bg-cover {
+  /* The image used */
+  background-image: url("../images/cover2.jpg");
+
+  /* per cent height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 19;
+}
+
+.cover-text{
+  font-size: 60px;
+  color: #ffffff;
+  font-family: lobster;
+}
+
+.cover-text-mini{
+  position: static;
+  font-family: lobster;
+  color: #ffff00;
+}
+
+ /* The Overlay (background) */
+ .overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+} 
+
+.bg-text {
+  transform: translate(-50%, -50%);
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.box-form{
+  position: relative;
+  top: 50%;
+  right: 20%;
+  text-align: center;
+  border-radius: 2px;
+  z-index: 12;
+}
+
+.input-style{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.text-left{
+  position: absolute;
+  z-index: 10;
+  left: 5%;
+  top: 35%;
+  bottom: 30%;
+}
+
+ /* Style inputs */
+ input[type=text], input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 120px;
+  float: right;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+.search-form-right{
+  position: relative;
+  z-index: 10;
+  border-radius: 3px;
+  border: 3px solid #fff;
+  opacity: 0.8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f8f9fa;
+  top: 60%;
+  left: 110%;
+  width: 80%;
+  height: 110%;
+}
+
+.search-form-right:hover{
+  position: relative;
+  z-index: 10;
+  border-radius: 3px;
+  border: 3px solid #fff;
+  opacity: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #f8f9fa;
+  top:  60%;
+  left: 110%;
+  width: 80%;
+  height: 110%;
+}
+
+@media screen and (max-width: 1100px){
+
+  .search-form-right{
+    display:none
+  }
+
+  .topbar {
+    display: none;
+  }
+
+  .cover-text{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .show-on-desktop{
+    display: none;
+  }
+
+}
+
+/* autocomplete form style */
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.rated{
+  color:orange;
+}
+
+/* BS redef for more custom style */
+
+.btn-outline-warning{
+  color:#212529;
+  border-color:#212529
+}
+
+.btn-outline-dark:hover{
+  color:#ffffff;
+  border-color:#ffffff;
+  background-color: #0776bd;
+}
+
+/* News bar style */
+.ticker {
+  width: 100%;
+  height: 45px;
+  margin: 0 auto;
+
+}
+.news {
+  width: 100%;
+  background: #60afe0;
+  padding: 2px;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  position: relative;
+  margin-right: 20px;
+}
+
+.containerH{
+  width :100%;
+  position: relative;
+  box-sizing: border-box;
+  
+}
+
+.title h5 {
+font-size: 18px;
+position: absolute;
+margin-top: 12px;
+padding-left: 12px;
+
+}
+.news marquee {
+font-size: 18px;
+width : 85%;
+padding-top: 7px;
+height: 50px;
+color : white;
+}
+
+/* cards animation */
+.shadow-drop-center:hover{
+  -webkit-animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both;
+  animation:shadow-drop-center .4s cubic-bezier(.25,.46,.45,.94) both
+}
+
+/* Attention animations on elements */
+.blink-1{
+  -webkit-animation:blink-1 3s infinite both;
+  animation:blink-1 3s infinite both
+}
+
+.prt-2{
+  z-index: 30;
+}
+
+.contact-form{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #222a33;
+}
+
+/* footer style */
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; 
+}
+
+.ftco-section {
+  padding: 12em 0; }
+  .ftco-section h2 {
+    margin-bottom: 0; }
+
+footer {
+  padding: 7em 0; }
+
+.footer-08 {
+  padding: 0;
+  overflow: hidden;
+  background: #f1f6f5; }
+  .footer-08 a {
+    color:rgba(224, 219, 219, 0.3); }
+  .footer-08 p {
+    color: rgba(224, 219, 219, 0.3); }
+  .footer-08 .footer-heading {
+    font-size: 18px;
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .footer-08 .footer-heading.footer-heading-white {
+        color: #fff; } }
+  .footer-08 ul.list-unstyled li a {
+    color: rgba(224, 219, 219, 0.3); }
+  .footer-08 .contact-form {
+    width: 100%; }
+    .footer-08 .contact-form .form-control {
+      height: 50px;
+      background: #fff;
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      border-radius: 5px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border: none; }
+      .footer-08 .contact-form .form-control::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: rgba(0, 0, 0, 0.3) !important; }
+      .footer-08 .contact-form .form-control::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(0, 0, 0, 0.3) !important; }
+      .footer-08 .contact-form .form-control:-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgba(0, 0, 0, 0.3) !important; }
+      .footer-08 .contact-form .form-control:-moz-placeholder {
+        /* Firefox 18- */
+        color: rgba(0, 0, 0, 0.3) !important; }
+      .footer-08 .contact-form .form-control:focus {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+      .footer-08 .contact-form .form-control:focus, .footer-08 .contact-form .form-control:active {
+        outline: none !important;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+    .footer-08 .contact-form .submit {
+      background: #2f89fc !important;
+      color: #fff; }
+    .footer-08 .contact-form textarea.form-control {
+      height: inherit !important; }
+  .footer-08 .aside-stretch-right {
+    background:  #222a33; }
+    .footer-08 .aside-stretch-right:after {
+      background: #e1e4e3; }
+    @media (max-width: 767.98px) {
+      .footer-08 .aside-stretch-right {
+        background: transparent; }
+        .footer-08 .aside-stretch-right:after {
+          background: transparent;
+          display: none; } }
+          ul.social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem;
+            list-style-type: none;
+            font-size: 2rem;
+        }
+
+        ul.social li {
+            padding: 1rem;
+        }
+
+        ul.social .fab {
+            font-size: 2rem;
+            margin-right: 5px;
+        }
+
+        /* transition for social icon hover animation */
+        .fa-facebook,
+        .fa-instagram,
+        .fa-twitter {
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        /* social media icons hover color */
+        .fa-facebook:hover,
+        .fa-facebook:focus {
+            color: #3b5998;
+            transform: scale(1.1);
+        }
+
+        .fa-twitter:hover,
+        .fa-twitter:focus {
+            color: #1da1f2;
+            transform: scale(1.1);
+        }
+
+        .fa-instagram:hover,
+        .fa-instagram:focus {
+            color: #bd22a2;
+            transform: scale(1.1);
+        }
+
+/* redef classes */
+
+.bg-dark{
+  background-color: #343a40!important ;
+}

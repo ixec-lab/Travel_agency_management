@@ -1,0 +1,104 @@
+
+@-webkit-keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}@keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}
+
+@font-face {
+  font-family: 'lobster';
+  src: url('../fonts/Lobster-Regular.ttf');
+}
+
+  /* login form style */
+
+  html,
+body {
+  /*height: 100%;*/
+  width: 100%;
+  height: 100%;
+  /*background: #EDE574;  
+  background: -webkit-linear-gradient(to right, #E1F5C4, #EDE574);  
+  background: linear-gradient(to right, #E1F5C4, #EDE574);*/
+
+
+}
+.style-form{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /*background-color: #ffffff;*/
+}
+.form-signin {
+  background-color: #ffffff ;
+  border-radius: 30px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  max-height: 500px;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* BS class redef for custom style */
+
+.btn-primary{
+  color:#fff;
+  background-color: #0776bd;
+  border-color:#007bff
+  }
+
+.header-text{
+  font-family: lobster;
+}
+
+.bg{
+  background-image: url(../images/login.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: inherit;
+  height: inherit;
+
+}
+
+.btn-outline-dark:hover{
+  color:#ffffff;
+  border-color:#ffffff;
+  background-color: #0776bd;
+}
+
+.color-change-2x{-webkit-animation:color-change-2x 2s linear infinite alternate both;animation:color-change-2x 2s linear infinite alternate both}
