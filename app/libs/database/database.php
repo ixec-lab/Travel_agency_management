@@ -2,8 +2,8 @@
 namespace AGENCE_VOYAGE\LIBS\DATABASE;
 
 class Database{
-    const USERNAME = "ixec";
-    const PASSWORD = "islem123";
+    const USERNAME = "username";
+    const PASSWORD = "password";
     const HOST = "127.0.0.1";
     const DRIVER = "mysql";
     const DBNAME = "agence_voyage";
